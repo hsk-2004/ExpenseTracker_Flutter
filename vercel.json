@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "public": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "outputDirectory": "build/web",
+  "installCommand": "flutter/bin/flutter build web",
+  "github": {
+    "silent": true
+  }
+}
