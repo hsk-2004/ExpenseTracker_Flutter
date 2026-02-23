@@ -14,23 +14,20 @@ class HomePage extends StatelessWidget {
     return Container(
       color: const Color(0xFFF9FAFC),
       child: SafeArea(
-        child: SingleChildScrollView(
-          physics: const AlwaysScrollableScrollPhysics(),
+        child: ListView(
+          physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 20),
-              _buildTopBar(),
-              const SizedBox(height: 40),
-              _buildBalanceSection(),
-              const SizedBox(height: 40),
-              _buildTransactionHeader(),
-              const SizedBox(height: 20),
-              const TransactionList(),
-              const SizedBox(height: 100),
-            ],
-          ),
+          children: [
+            const SizedBox(height: 20),
+            _buildTopBar(),
+            const SizedBox(height: 40),
+            _buildBalanceSection(),
+            const SizedBox(height: 40),
+            _buildTransactionHeader(),
+            const SizedBox(height: 20),
+            const TransactionList(),
+            const SizedBox(height: 120),
+          ],
         ),
       ),
     );

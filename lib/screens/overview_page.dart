@@ -31,7 +31,7 @@ class OverviewPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
+        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,7 +140,7 @@ class OverviewPage extends StatelessWidget {
               iconColor: Colors.blue,
               bgColor: const Color(0xFFEDF7FF),
             ),
-            const SizedBox(height: 100),
+            const SizedBox(height: 150),
           ],
         ),
       ),
